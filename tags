@@ -1,0 +1,218 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Bytes	os/exec/exec.go	/^func (w *prefixSuffixSaver) Bytes() []byte {$/;"	d
+Close	os/exec/exec.go	/^func (c *closeOnce) Close() error {$/;"	d
+Cmd	os/exec/exec.go	/^type Cmd struct {$/;"	d
+CombinedOutput	os/exec/exec.go	/^func (c *Cmd) CombinedOutput() ([]byte, error) {$/;"	d
+Command	os/exec/exec.go	/^func Command(name string, arg ...string) *Cmd {$/;"	d
+CommandContext	os/exec/exec.go	/^func CommandContext(ctx context.Context, name string, arg ...string) *Cmd {$/;"	d
+ErrNotFound	os/exec/lp_js.go	/^var ErrNotFound = errors.New("executable file not found in $PATH")$/;"	d
+ErrNotFound	os/exec/lp_plan9.go	/^var ErrNotFound = errors.New("executable file not found in $path")$/;"	d
+ErrNotFound	os/exec/lp_unix.go	/^var ErrNotFound = errors.New("executable file not found in $PATH")$/;"	d
+ErrNotFound	os/exec/lp_windows.go	/^var ErrNotFound = errors.New("executable file not found in %PATH%")$/;"	d
+Error	os/exec/exec.go	/^func (e *Error) Error() string {$/;"	d
+Error	os/exec/exec.go	/^func (e *ExitError) Error() string {$/;"	d
+Error	os/exec/exec.go	/^type Error struct {$/;"	d
+ExampleCmd_CombinedOutput	os/exec/example_test.go	/^func ExampleCmd_CombinedOutput() {$/;"	d
+ExampleCmd_Output	os/exec/example_test.go	/^func ExampleCmd_Output() {$/;"	d
+ExampleCmd_Run	os/exec/example_test.go	/^func ExampleCmd_Run() {$/;"	d
+ExampleCmd_Start	os/exec/example_test.go	/^func ExampleCmd_Start() {$/;"	d
+ExampleCmd_StderrPipe	os/exec/example_test.go	/^func ExampleCmd_StderrPipe() {$/;"	d
+ExampleCmd_StdinPipe	os/exec/example_test.go	/^func ExampleCmd_StdinPipe() {$/;"	d
+ExampleCmd_StdoutPipe	os/exec/example_test.go	/^func ExampleCmd_StdoutPipe() {$/;"	d
+ExampleCommand	os/exec/example_test.go	/^func ExampleCommand() {$/;"	d
+ExampleCommandContext	os/exec/example_test.go	/^func ExampleCommandContext() {$/;"	d
+ExampleCommand_environment	os/exec/example_test.go	/^func ExampleCommand_environment() {$/;"	d
+ExampleLookPath	os/exec/example_test.go	/^func ExampleLookPath() {$/;"	d
+ExitCode	os/exec_posix.go	/^func (p *ProcessState) ExitCode() int {$/;"	d
+ExitError	os/exec/exec.go	/^type ExitError struct {$/;"	d
+Exited	os/exec.go	/^func (p *ProcessState) Exited() bool {$/;"	d
+FindProcess	os/exec.go	/^func FindProcess(pid int) (*Process, error) {$/;"	d
+Getpid	os/exec.go	/^func Getpid() int { return syscall.Getpid() }$/;"	d
+Getppid	os/exec.go	/^func Getppid() int { return syscall.Getppid() }$/;"	d
+Kill	os/exec.go	/^func (p *Process) Kill() error {$/;"	d
+LookPath	os/exec/lp_js.go	/^func LookPath(file string) (string, error) {$/;"	d
+LookPath	os/exec/lp_plan9.go	/^func LookPath(file string) (string, error) {$/;"	d
+LookPath	os/exec/lp_unix.go	/^func LookPath(file string) (string, error) {$/;"	d
+LookPath	os/exec/lp_windows.go	/^func LookPath(file string) (string, error) {$/;"	d
+Output	os/exec/exec.go	/^func (c *Cmd) Output() ([]byte, error) {$/;"	d
+Pid	os/exec_posix.go	/^func (p *ProcessState) Pid() int {$/;"	d
+ProcAttr	os/exec.go	/^type ProcAttr struct {$/;"	d
+Process	os/exec.go	/^type Process struct {$/;"	d
+ProcessState	os/exec_posix.go	/^type ProcessState struct {$/;"	d
+Read	os/exec/exec_test.go	/^func (delayedInfiniteReader) Read(b []byte) (int, error) {$/;"	d
+Release	os/exec.go	/^func (p *Process) Release() error {$/;"	d
+Run	os/exec/exec.go	/^func (c *Cmd) Run() error {$/;"	d
+Signal	os/exec.go	/^func (p *Process) Signal(sig Signal) error {$/;"	d
+Signal	os/exec.go	/^type Signal interface {$/;"	d
+Start	os/exec/exec.go	/^func (c *Cmd) Start() error {$/;"	d
+StartProcess	os/exec.go	/^func StartProcess(name string, argv []string, attr *ProcAttr) (*Process, error) {$/;"	d
+StderrPipe	os/exec/exec.go	/^func (c *Cmd) StderrPipe() (io.ReadCloser, error) {$/;"	d
+StdinPipe	os/exec/exec.go	/^func (c *Cmd) StdinPipe() (io.WriteCloser, error) {$/;"	d
+StdoutPipe	os/exec/exec.go	/^func (c *Cmd) StdoutPipe() (io.ReadCloser, error) {$/;"	d
+String	os/exec_posix.go	/^func (p *ProcessState) String() string {$/;"	d
+Success	os/exec.go	/^func (p *ProcessState) Success() bool {$/;"	d
+Sys	os/exec.go	/^func (p *ProcessState) Sys() interface{} {$/;"	d
+SysProcAttr	syscall/exec_linux.go	/^type SysProcAttr struct {$/;"	d
+SysProcIDMap	syscall/exec_linux.go	/^type SysProcIDMap struct {$/;"	d
+SysUsage	os/exec.go	/^func (p *ProcessState) SysUsage() interface{} {$/;"	d
+SystemTime	os/exec.go	/^func (p *ProcessState) SystemTime() time.Duration {$/;"	d
+TestAmbientCaps	syscall/exec_linux_test.go	/^func TestAmbientCaps(t *testing.T) {$/;"	d
+TestAmbientCapsHelper	syscall/exec_linux_test.go	/^func TestAmbientCapsHelper(*testing.T) {$/;"	d
+TestCatGoodAndBadFile	os/exec/exec_test.go	/^func TestCatGoodAndBadFile(t *testing.T) {$/;"	d
+TestCatStdin	os/exec/exec_test.go	/^func TestCatStdin(t *testing.T) {$/;"	d
+TestCloneNEWUSERAndRemapNoRootDisableSetgroups	syscall/exec_linux_test.go	/^func TestCloneNEWUSERAndRemapNoRootDisableSetgroups(t *testing.T) {$/;"	d
+TestCloneNEWUSERAndRemapNoRootSetgroupsEnableSetgroups	syscall/exec_linux_test.go	/^func TestCloneNEWUSERAndRemapNoRootSetgroupsEnableSetgroups(t *testing.T) {$/;"	d
+TestCloneNEWUSERAndRemapRootDisableSetgroups	syscall/exec_linux_test.go	/^func TestCloneNEWUSERAndRemapRootDisableSetgroups(t *testing.T) {$/;"	d
+TestCloneNEWUSERAndRemapRootEnableSetgroups	syscall/exec_linux_test.go	/^func TestCloneNEWUSERAndRemapRootEnableSetgroups(t *testing.T) {$/;"	d
+TestClosePipeOnCopyError	os/exec/exec_test.go	/^func TestClosePipeOnCopyError(t *testing.T) {$/;"	d
+TestCommand	os/exec/lp_windows_test.go	/^func TestCommand(t *testing.T) {$/;"	d
+TestCommandRelativeName	os/exec/exec_test.go	/^func TestCommandRelativeName(t *testing.T) {$/;"	d
+TestContext	os/exec/exec_test.go	/^func TestContext(t *testing.T) {$/;"	d
+TestContextCancel	os/exec/exec_test.go	/^func TestContextCancel(t *testing.T) {$/;"	d
+TestCredentialNoSetGroups	os/exec/exec_posix_test.go	/^func TestCredentialNoSetGroups(t *testing.T) {$/;"	d
+TestDedupEnv	os/exec/env_test.go	/^func TestDedupEnv(t *testing.T) {$/;"	d
+TestDedupEnvEcho	os/exec/exec_test.go	/^func TestDedupEnvEcho(t *testing.T) {$/;"	d
+TestEcho	os/exec/exec_test.go	/^func TestEcho(t *testing.T) {$/;"	d
+TestEchoFileRace	os/exec/exec_test.go	/^func TestEchoFileRace(t *testing.T) {$/;"	d
+TestEmptyCredGroupsDisableSetgroups	syscall/exec_linux_test.go	/^func TestEmptyCredGroupsDisableSetgroups(t *testing.T) {$/;"	d
+TestExitCode	os/exec/exec_test.go	/^func TestExitCode(t *testing.T) {$/;"	d
+TestExitStatus	os/exec/exec_test.go	/^func TestExitStatus(t *testing.T) {$/;"	d
+TestExtraFiles	os/exec/exec_test.go	/^func TestExtraFiles(t *testing.T) {$/;"	d
+TestExtraFilesFDShuffle	os/exec/exec_test.go	/^func TestExtraFilesFDShuffle(t *testing.T) {$/;"	d
+TestExtraFilesRace	os/exec/exec_test.go	/^func TestExtraFilesRace(t *testing.T) {$/;"	d
+TestGroupCleanup	syscall/exec_linux_test.go	/^func TestGroupCleanup(t *testing.T) {$/;"	d
+TestGroupCleanupUserNamespace	syscall/exec_linux_test.go	/^func TestGroupCleanupUserNamespace(t *testing.T) {$/;"	d
+TestHelperProcess	os/exec/exec_test.go	/^	if !strings.Contains(body, "func TestHelperProcess(t *testing.T)") {$/;"	d
+TestHelperProcess	os/exec/exec_test.go	/^func TestHelperProcess(*testing.T) {$/;"	d
+TestIgnorePipeErrorOnSuccess	os/exec/exec_test.go	/^func TestIgnorePipeErrorOnSuccess(t *testing.T) {$/;"	d
+TestLookPath	os/exec/lp_windows_test.go	/^func TestLookPath(t *testing.T) {$/;"	d
+TestLookPathNotFound	os/exec/lp_test.go	/^func TestLookPathNotFound(t *testing.T) {$/;"	d
+TestLookPathUnixEmptyPath	os/exec/lp_unix_test.go	/^func TestLookPathUnixEmptyPath(t *testing.T) {$/;"	d
+TestNoExistExecutable	os/exec/exec_test.go	/^func TestNoExistExecutable(t *testing.T) {$/;"	d
+TestOutputStderrCapture	os/exec/exec_test.go	/^func TestOutputStderrCapture(t *testing.T) {$/;"	d
+TestPipeLookPathLeak	os/exec/exec_test.go	/^func TestPipeLookPathLeak(t *testing.T) {$/;"	d
+TestPipes	os/exec/exec_test.go	/^func TestPipes(t *testing.T) {$/;"	d
+TestPrefixSuffixSaver	os/exec/internal_test.go	/^func TestPrefixSuffixSaver(t *testing.T) {$/;"	d
+TestStdinClose	os/exec/exec_test.go	/^func TestStdinClose(t *testing.T) {$/;"	d
+TestStdinCloseRace	os/exec/exec_test.go	/^func TestStdinCloseRace(t *testing.T) {$/;"	d
+TestUnshare	syscall/exec_linux_test.go	/^func TestUnshare(t *testing.T) {$/;"	d
+TestUnshareMountNameSpace	syscall/exec_linux_test.go	/^func TestUnshareMountNameSpace(t *testing.T) {$/;"	d
+TestUnshareMountNameSpaceHelper	syscall/exec_linux_test.go	/^func TestUnshareMountNameSpaceHelper(*testing.T) {$/;"	d
+TestWaitid	os/exec/exec_posix_test.go	/^func TestWaitid(t *testing.T) {$/;"	d
+UserTime	os/exec.go	/^func (p *ProcessState) UserTime() time.Duration {$/;"	d
+Wait	os/exec.go	/^func (p *Process) Wait() (*ProcessState, error) {$/;"	d
+Wait	os/exec/exec.go	/^func (c *Cmd) Wait() error {$/;"	d
+Write	os/exec/exec.go	/^func (w *prefixSuffixSaver) Write(p []byte) (n int, err error) {$/;"	d
+Write	os/exec/exec_test.go	/^func (w *badWriter) Write(data []byte) (int, error) {$/;"	d
+args	os/exec/exec_test.go	/^					var args []string$/;"	d
+argv	os/exec/exec.go	/^func (c *Cmd) argv() []string {$/;"	d
+badWriter	os/exec/exec_test.go	/^type badWriter struct{}$/;"	d
+basefds	os/exec/exec_test.go	/^func basefds() uintptr {$/;"	d
+buf	os/exec/exec.go	/^	var buf bytes.Buffer$/;"	d
+buf	syscall/exec_linux_test.go	/^	var buf [65]byte$/;"	d
+buildPrintPathExe	os/exec/lp_windows_test.go	/^func buildPrintPathExe(t *testing.T, dir string) string {$/;"	d
+capData	syscall/exec_linux_test.go	/^type capData struct {$/;"	d
+capHeader	syscall/exec_linux_test.go	/^type capHeader struct {$/;"	d
+caps	syscall/exec_linux_test.go	/^type caps struct {$/;"	d
+checkUserNS	syscall/exec_linux_test.go	/^func checkUserNS(t *testing.T) {$/;"	d
+chkStat	os/exec/lp_windows.go	/^func chkStat(file string) error {$/;"	d
+close	os/exec/exec.go	/^func (c *closeOnce) close() {$/;"	d
+closeDescriptors	os/exec/exec.go	/^func (c *Cmd) closeDescriptors(closers []io.Closer) {$/;"	d
+closeOnce	os/exec/exec.go	/^type closeOnce struct {$/;"	d
+closeUnexpectedFds	os/exec/exec_test.go	/^func closeUnexpectedFds(t *testing.T, m string) {$/;"	d
+commandTest	os/exec/lp_windows_test.go	/^type commandTest struct {$/;"	d
+commandTests	os/exec/lp_windows_test.go	/^var commandTests = []commandTest{$/;"	d
+copyError	os/exec/exec.go	/^	var copyError error$/;"	d
+createEnv	os/exec/lp_windows_test.go	/^func createEnv(dir, PATH, PATHEXT string) []string {$/;"	d
+createFiles	os/exec/lp_windows_test.go	/^func createFiles(t *testing.T, dir string, files []string, srcPath string) {$/;"	d
+data	syscall/exec_linux.go	/^	var data []byte$/;"	d
+dedupEnv	os/exec/exec.go	/^func dedupEnv(env []string) []string {$/;"	d
+dedupEnvCase	os/exec/exec.go	/^func dedupEnvCase(caseInsensitive bool, env []string) []string {$/;"	d
+delayedInfiniteReader	os/exec/exec_test.go	/^type delayedInfiniteReader struct{}$/;"	d
+done	os/exec.go	/^func (p *Process) done() bool {$/;"	d
+envv	os/exec/exec.go	/^func (c *Cmd) envv() []string {$/;"	d
+err	os/exec/exec.go	/^	var err error$/;"	d
+err2	syscall/exec_linux.go	/^		var err2 Errno$/;"	d
+errFinished	os/exec_unix.go	/^var errFinished = errors.New("os: process already finished")$/;"	d
+exited	os/exec_posix.go	/^func (p *ProcessState) exited() bool {$/;"	d
+exts	os/exec/lp_windows.go	/^	var exts []string$/;"	d
+files	os/exec/exec_test.go	/^			var files []*os.File$/;"	d
+fill	os/exec/exec.go	/^func (w *prefixSuffixSaver) fill(dst *[]byte, p []byte) (pRemain []byte) {$/;"	d
+findExecutable	os/exec/lp_plan9.go	/^func findExecutable(file string) error {$/;"	d
+findExecutable	os/exec/lp_unix.go	/^func findExecutable(file string) error {$/;"	d
+findExecutable	os/exec/lp_windows.go	/^func findExecutable(file string, exts []string) (string, error) {$/;"	d
+findProcess	os/exec_unix.go	/^func findProcess(pid int) (p *Process, err error) {$/;"	d
+forkAndExecInChild	syscall/exec_linux.go	/^func forkAndExecInChild(argv0 *byte, argv, envv []*byte, chroot, dir *byte, attr *ProcAttr, sys *SysProcAttr, pipe int) (pid int, err Errno) {$/;"	d
+forkAndExecInChild1	syscall/exec_linux.go	/^func forkAndExecInChild1(argv0 *byte, argv, envv []*byte, chroot, dir *byte, attr *ProcAttr, sys *SysProcAttr, pipe int) (r1 uintptr, err1 Errno, p [2]int, locked bool) {$/;"	d
+forkExecPipe	syscall/exec_linux.go	/^func forkExecPipe(p []int) (err error) {$/;"	d
+getCaps	syscall/exec_linux_test.go	/^func getCaps() (caps, error) {$/;"	d
+getMyName	os/exec/lp_windows_test.go	/^func getMyName() (string, error) {$/;"	d
+hasExt	os/exec/lp_windows.go	/^func hasExt(file string) bool {$/;"	d
+helperCommand	os/exec/exec_test.go	/^func helperCommand(t *testing.T, s ...string) *exec.Cmd {$/;"	d
+helperCommandContext	os/exec/exec_test.go	/^func helperCommandContext(t *testing.T, ctx context.Context, s ...string) (cmd *exec.Cmd) {$/;"	d
+init	os/exec/exec_unix.go	/^func init() {$/;"	d
+init	os/exec/exec_windows.go	/^func init() {$/;"	d
+installBat	os/exec/lp_windows_test.go	/^func installBat(t *testing.T, dest string) {$/;"	d
+installExe	os/exec/lp_windows_test.go	/^func installExe(t *testing.T, dest, src string) {$/;"	d
+installProg	os/exec/lp_windows_test.go	/^func installProg(t *testing.T, dest, srcExe string) {$/;"	d
+interfaceEqual	os/exec/exec.go	/^func interfaceEqual(a, b interface{}) bool {$/;"	d
+isChrooted	syscall/exec_linux_test.go	/^func isChrooted(t *testing.T) bool {$/;"	d
+isDocker	syscall/exec_linux_test.go	/^func isDocker() bool {$/;"	d
+isLXC	syscall/exec_linux_test.go	/^func isLXC() bool {$/;"	d
+isSuccess	os/exec/lp_windows_test.go	/^func (test commandTest) isSuccess(rootDir, output string, err error) error {$/;"	d
+kill	os/exec_posix.go	/^func (p *Process) kill() error {$/;"	d
+lookExtensions	os/exec/exec.go	/^func lookExtensions(path, dir string) (string, error) {$/;"	d
+lookPathTest	os/exec/lp_windows_test.go	/^type lookPathTest struct {$/;"	d
+lookPathTests	os/exec/lp_windows_test.go	/^var lookPathTests = []lookPathTest{$/;"	d
+main	os/exec/lp_windows_test.go	/^func main() {$/;"	d
+minInt	os/exec/exec.go	/^func minInt(a, b int) int {$/;"	d
+mustSupportAmbientCaps	syscall/exec_linux_test.go	/^func mustSupportAmbientCaps(t *testing.T) {$/;"	d
+newProcess	os/exec.go	/^func newProcess(pid int, handle uintptr) *Process {$/;"	d
+nonExistentPaths	os/exec/lp_test.go	/^var nonExistentPaths = []string{$/;"	d
+numOpenFDsAndroid	os/exec/exec_test.go	/^func numOpenFDsAndroid(t *testing.T) (n int, lsof []byte) {$/;"	d
+out	os/exec/example_test.go	/^	var out bytes.Buffer$/;"	d
+out	os/exec/exec_test.go	/^			var out bytes.Buffer$/;"	d
+person	os/exec/example_test.go	/^	var person struct {$/;"	d
+prefixSuffixSaver	os/exec/exec.go	/^type prefixSuffixSaver struct {$/;"	d
+release	os/exec_unix.go	/^func (p *Process) release() error {$/;"	d
+run	os/exec/lp_windows_test.go	/^func (test commandTest) run(t *testing.T, rootDir, printpathExe string) {$/;"	d
+run	os/exec/lp_windows_test.go	/^func (test lookPathTest) run(t *testing.T, tmpdir, printpathExe string) {$/;"	d
+runOne	os/exec/lp_windows_test.go	/^func (test commandTest) runOne(rootDir string, env []string, dir, arg0 string) error {$/;"	d
+runProg	os/exec/lp_windows_test.go	/^func (test lookPathTest) runProg(t *testing.T, env []string, args ...string) (string, error) {$/;"	d
+runtime_AfterFork	syscall/exec_linux.go	/^func runtime_AfterFork()$/;"	d
+runtime_AfterForkInChild	syscall/exec_linux.go	/^func runtime_AfterForkInChild()$/;"	d
+runtime_BeforeFork	syscall/exec_linux.go	/^func runtime_BeforeFork()$/;"	d
+rusage	os/exec_unix.go	/^	var rusage syscall.Rusage$/;"	d
+setDone	os/exec.go	/^func (p *Process) setDone() {$/;"	d
+signal	os/exec_unix.go	/^func (p *Process) signal(sig Signal) error {$/;"	d
+skipInContainer	syscall/exec_linux_test.go	/^func skipInContainer(t *testing.T) {$/;"	d
+skipStdinCopyError	os/exec/exec.go	/^var skipStdinCopyError func(error) bool$/;"	d
+startProcess	os/exec_posix.go	/^func startProcess(name string, argv []string, attr *ProcAttr) (p *Process, err error) {$/;"	d
+status	os/exec_unix.go	/^	var status syscall.WaitStatus$/;"	d
+stderr	os/exec/exec.go	/^func (c *Cmd) stderr() (f *os.File, err error) {$/;"	d
+stdin	os/exec/exec.go	/^func (c *Cmd) stdin() (f *os.File, err error) {$/;"	d
+stdout	os/exec/exec.go	/^	var stdout bytes.Buffer$/;"	d
+stdout	os/exec/exec.go	/^func (c *Cmd) stdout() (f *os.File, err error) {$/;"	d
+stdout	os/exec/exec_test.go	/^	var stdout, stderr bytes.Buffer$/;"	d
+success	os/exec_posix.go	/^func (p *ProcessState) success() bool {$/;"	d
+sys	os/exec_posix.go	/^func (p *ProcessState) sys() interface{} {$/;"	d
+sysUsage	os/exec_posix.go	/^func (p *ProcessState) sysUsage() interface{} {$/;"	d
+sysproc	os/exec/lp_windows_test.go	/^	var sysproc = syscall.MustLoadDLL("kernel32.dll").MustFindProc("GetModuleFileNameW")$/;"	d
+systemTime	os/exec_unix.go	/^func (p *ProcessState) systemTime() time.Duration {$/;"	d
+testNEWUSERRemap	syscall/exec_linux_test.go	/^func testNEWUSERRemap(t *testing.T, uid, gid int, setgroups bool) {$/;"	d
+testedAlreadyLeaked	os/exec/exec_test.go	/^var testedAlreadyLeaked = false$/;"	d
+that	os/exec/exec.go	/^	\/\/ If Stdout and Stderr are the same writer, and have a type that can$/;"	d
+uname	syscall/exec_linux_test.go	/^	var uname syscall.Utsname$/;"	d
+updateEnv	os/exec/lp_windows_test.go	/^func updateEnv(env []string, name, value string) []string {$/;"	d
+userTime	os/exec_unix.go	/^func (p *ProcessState) userTime() time.Duration {$/;"	d
+wait	os/exec_unix.go	/^func (p *Process) wait() (ps *ProcessState, err error) {$/;"	d
+whoamiCmd	syscall/exec_linux_test.go	/^func whoamiCmd(t *testing.T, uid, gid int, setgroups bool) *exec.Cmd {$/;"	d
+writeIDMappings	syscall/exec_linux.go	/^func writeIDMappings(path string, idMap []SysProcIDMap) error {$/;"	d
+writeSetgroups	syscall/exec_linux.go	/^func writeSetgroups(pid int, enable bool) error {$/;"	d
+writeUidGidMappings	syscall/exec_linux.go	/^func writeUidGidMappings(pid int, sys *SysProcAttr) error {$/;"	d
+writerDescriptor	os/exec/exec.go	/^func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error) {$/;"	d
