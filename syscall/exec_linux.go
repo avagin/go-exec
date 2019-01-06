@@ -102,6 +102,21 @@ func forkAndExecInChild(argv0 *byte, argv, envv []*byte, chroot, dir *byte, attr
 	return pid, 0
 }
 
+type capHeader struct {
+	version uint32
+	pid     int
+}
+
+type capData struct {
+	effective   uint32
+	permitted   uint32
+	inheritable uint32
+}
+type caps struct {
+	hdr  capHeader
+	data [2]capData
+}
+
 // forkAndExecInChild1 implements the body of forkAndExecInChild up to
 // the parent's post-fork path. This is a separate function so we can
 // separate the child's and parent's stack frames if we're using
@@ -130,6 +145,7 @@ func forkAndExecInChild1(argv0 *byte, argv, envv []*byte, chroot, dir *byte, att
 		err2   syscall.Errno
 		nextfd int
 		i      int
+		caps   caps
 	)
 
 	// Record parent PID so child can test if it has died.
@@ -294,10 +310,36 @@ func forkAndExecInChild1(argv0 *byte, argv, envv []*byte, chroot, dir *byte, att
 		}
 	}
 
-	for _, c := range sys.AmbientCaps {
-		_, _, err1 = syscall.RawSyscall6(syscall.SYS_PRCTL, PR_CAP_AMBIENT, uintptr(PR_CAP_AMBIENT_RAISE), c, 0, 0, 0)
+	if len(sys.AmbientCaps) != 0 {
+		// Get capability version
+		if _, _, err := syscall.RawSyscall(syscall.SYS_CAPGET, uintptr(unsafe.Pointer(&caps.hdr)), uintptr(unsafe.Pointer(nil)), 0); err != 0 {
+			goto childerror
+		}
+
+		// Get current capabilities
+		if _, _, err := syscall.RawSyscall(syscall.SYS_CAPGET, uintptr(unsafe.Pointer(&caps.hdr)), uintptr(unsafe.Pointer(&caps.data[0])), 0); err != 0 {
+			goto childerror
+		}
 		if err1 != 0 {
 			goto childerror
+		}
+
+		for _, c := range sys.AmbientCaps {
+			// Add CAP_SYS_TIME to the permitted and inheritable capability mask,
+			// otherwise we will not be able to add it to the ambient capability mask.
+			caps.data[0].permitted |= 1 << uint(c)
+			caps.data[0].inheritable |= 1 << uint(c)
+		}
+
+		if _, _, err1 := syscall.RawSyscall(syscall.SYS_CAPSET, uintptr(unsafe.Pointer(&caps.hdr)), uintptr(unsafe.Pointer(&caps.data[0])), 0); err1 != 0 {
+			goto childerror
+		}
+
+		for _, c := range sys.AmbientCaps {
+			_, _, err1 = syscall.RawSyscall6(syscall.SYS_PRCTL, PR_CAP_AMBIENT, uintptr(PR_CAP_AMBIENT_RAISE), c, 0, 0, 0)
+			if err1 != 0 {
+				goto childerror
+			}
 		}
 	}
 

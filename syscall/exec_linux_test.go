@@ -466,20 +466,6 @@ func TestAmbientCaps(t *testing.T) {
 		t.Skip("skipping test on android; see Issue 27327")
 	}
 
-	caps, err := getCaps()
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	// Add CAP_SYS_TIME to the permitted and inheritable capability mask,
-	// otherwise we will not be able to add it to the ambient capability mask.
-	caps.data[0].permitted |= 1 << uint(CAP_SYS_TIME)
-	caps.data[0].inheritable |= 1 << uint(CAP_SYS_TIME)
-
-	if _, _, errno := syscall.Syscall(syscall.SYS_CAPSET, uintptr(unsafe.Pointer(&caps.hdr)), uintptr(unsafe.Pointer(&caps.data[0])), 0); errno != 0 {
-		t.Fatalf("SYS_CAPSET: %v", errno)
-	}
-
 	u, err := user.Lookup("nobody")
 	if err != nil {
 		t.Fatal(err)
@@ -526,6 +512,25 @@ func TestAmbientCaps(t *testing.T) {
 		},
 		AmbientCaps: []uintptr{CAP_SYS_TIME},
 	}
+	cmd.SysProcAttr.Cloneflags = syscall.CLONE_NEWUSER
+	const nobody = 65534
+	cmd.SysProcAttr.UidMappings = []syscall2.SysProcIDMap{{
+		ContainerID: int(nobody),
+		HostID:      int(nobody),
+		Size:        int(1),
+	}}
+	cmd.SysProcAttr.GidMappings = []syscall2.SysProcIDMap{{
+		ContainerID: int(nobody),
+		HostID:      int(nobody),
+		Size:        int(1),
+	}}
+
+	// Set credentials to run as user and group nobody.
+	cmd.SysProcAttr.Credential = &syscall.Credential{
+		Uid: nobody,
+		Gid: nobody,
+	}
+
 	if err := cmd.Run(); err != nil {
 		t.Fatal(err.Error())
 	}
